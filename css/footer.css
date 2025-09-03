@@ -1,0 +1,12 @@
+.rodape {
+    background: var(--cor-primaria);
+    color: var(--cor-branca);
+    text-align: center;
+    padding: 10px 20px;
+    position: fixed;  /* fixa no rodapé */
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+    font-size: 1rem;
+}
