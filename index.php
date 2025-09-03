@@ -13,6 +13,18 @@ require_once APP_ROOT . '/partials/_header.php';
 
 <main>
     <section class="apresentacao">
+        
+    <!-- Adicione dentro da section .apresentacao ou antes dos cards -->
+        <div class="carrossel">
+            <div class="carrossel-imagens">
+                <img src="img/doces.jpg" alt="Doces">
+                <img src="img/massas.jpg" alt="Massas">
+                <img src="img/carnes.jpg" alt="Carnes">
+            </div>
+            <button class="carrossel-btn prev">&#10094;</button>
+            <button class="carrossel-btn next">&#10095;</button>
+        </div>
+
         <h1 class="titulo-principal">Como tudo começou</h1>
         <p class="text-coment">
             O StoryBites nasceu com o intuito de reunir histórias através das receitas de famílias. 
@@ -79,5 +91,7 @@ require_once APP_ROOT . '/partials/_header.php';
     </section>
 
 </main>
+
+<script src="script.js"></script>
 
 <?php require_once APP_ROOT . '/partials/_footer.php'; ?>
