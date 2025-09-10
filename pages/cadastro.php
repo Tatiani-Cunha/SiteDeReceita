@@ -3,7 +3,7 @@ $ACTIVE_PAGE = 'cadastro';
 $PAGE_TITLE  = 'StoryBites — Cadastro';
 $PAGE_DESC   = 'Doces caseiros com histórias e memórias afetivas.';
 $PAGE_STYLES = [
-                'css/card-receitas.css',
+                'css/login.css',
 ]; // CSS específico desta página
 
 require_once __DIR__ . '/../config.php';
@@ -12,8 +12,8 @@ require_once APP_ROOT . '/partials/_header.php';
 ?>
 
 <main class="formulario">
-  <h2>Cadastro de Usuário</h2>
-  <form action="processa_cadastro.php" method="post">
+  <h2 class="titulo_login">Cadastro de Usuário</h2>
+  <form class="box_form" action="processa_cadastro.php" method="post">
     <label for="nome">Apelido:</label>
     <input type="text" name="nome" id="nome" required>
 

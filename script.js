@@ -1,13 +1,26 @@
-const imagens = document.querySelectorAll('.carrossel-imagens img');
-const carrossel = document.querySelector('.carrossel-imagens');
-let idx = 0;
+// script.js
 
-document.querySelector('.carrossel-btn.next').onclick = () => {
-    idx = (idx + 1) % imagens.length;
-    carrossel.style.transform = `translateX(-${idx * 600}px)`;
-};
+document.addEventListener('DOMContentLoaded', function() {
+  const carouselImages = document.querySelector('.carrossel-imagens');
+  const slides = carouselImages.querySelectorAll('.slide');
+  const prevBtn = document.querySelector('.carrossel-btn.prev');
+  const nextBtn = document.querySelector('.carrossel-btn.next');
+  let currentIndex = 0;
 
-document.querySelector('.carrossel-btn.prev').onclick = () => {
-    idx = (idx - 1 + imagens.length) % imagens.length;
-    carrossel.style.transform = `translateX(-${idx * 600}px)`;
-};
+  function goToSlide(index) {
+    // Garante que o índice esteja dentro dos limites
+    if (index < 0) index = slides.length - 1;
+    if (index >= slides.length) index = 0;
+    
+    carouselImages.style.transform = `translateX(-${index * 100}%)`;
+    currentIndex = index;
+  }
+
+  prevBtn.addEventListener('click', function() {
+    goToSlide(currentIndex - 1);
+  });
+
+  nextBtn.addEventListener('click', function() {
+    goToSlide(currentIndex + 1);
+  });
+});

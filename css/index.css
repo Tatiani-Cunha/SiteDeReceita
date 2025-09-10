@@ -1,75 +1,40 @@
+/* Layout da pagina principal */
 
-/* MAIN */
-.apresentacao {
-    max-width: 900px;
-    margin: 30px auto;
-    text-align: center;
+main{
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
     padding: 20px;
 }
 
 
-/* Carrossel */
-.carrossel {
-    position: relative;
-    max-width: 600px;
-    margin: 0 auto 30px auto;
-    overflow: hidden;
+.apresentacao {
+    margin-bottom: 40px;
+    text-align: center;
 }
 
-.carrossel-imagens {
-    display: flex;
-    transition: transform 0.5s ease;
-    width: 100%;
-}
 
-.carrossel-imagens img {
-    width: 600px;
-    height: 300px;
-    object-fit: cover;
-    flex-shrink: 0;
-}
 
-.carrossel-btn {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background: rgba(0,0,0,0.5);
-    color: #fff;
-    border: none;
+.apresentacao .titulo-principal {
     font-size: 2rem;
-    padding: 0 10px;
-    cursor: pointer;
-    z-index: 2;
-}
-
-.carrossel-btn.prev { left: 10px; }
-.carrossel-btn.next { right: 10px; }
-
-
-
-
-.titulo-principal {
-    margin-bottom: 20px;
-    font-size: 2rem;
+    margin: 20px 0;
     color: var(--cor-primaria);
     
 }
 
-/* ======= PARÁGRAFO ======= */
-.text-coment {
+.apresentacao .text-coment {
     color: var(--cor-primaria);
     font-size: 1.2rem;
     line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto;
 }
 
-/* CARD DE RECEITAS */
+/* Card de Receitas */
 .conteudo {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 20px;
-    max-width: 1200px;
-    margin: 30px auto;
-    padding: 0 15px;
+    gap: 24px;
 }
 
 .card {
@@ -79,6 +44,12 @@
     box-shadow: 0 2px 6px rgba(0,0,0,0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
 
 .card img {
     width: 100%;
@@ -101,7 +72,7 @@
     color: var(--cor-primaria);
 }
 
-.button {
+.card .button {
     display: inline-block;
     background: var(--cor-primaria);
     color: var(--cor-branca);
@@ -111,14 +82,62 @@
     transition: background 0.3s ease;
 }
 
-
-.button:hover {
+.card .button:hover {
     background: #e64a19;
 }
 
-.card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+
+/* Responsividade Tablets */
+@media (max-width: 768px) {
+    .apresentacao .titulo-principal {
+        font-size: 1.8rem;
+    }
+
+    .apresentacao .text-coment {
+        font-size: 1rem;
+        padding: 0 15px;
+    }
+
+    .conteudo {
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 16px;
+    }
+
+    .card img {
+        height: 180px;
+    }
 }
 
+/* Responsividade Celulares */
+@media (max-width: 480px) {
+    .apresentacao .titulo-principal {
+        font-size: 1.4rem;
+    }
 
+    .apresentacao .text-coment {
+        font-size: 0.95rem;
+        padding: 0 10px;
+    }
+
+    .conteudo {
+        grid-template-columns: 1fr; 
+        gap: 14px;
+    }
+
+    .card img {
+        height: 160px;
+    }
+
+    .card h2 {
+        font-size: 1.2rem;
+    }
+
+    .card p {
+        font-size: 0.9rem;
+    }
+
+    .card .button {
+        font-size: 0.9rem;
+        padding: 6px 12px;
+    }
+}
