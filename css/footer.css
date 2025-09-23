@@ -1,0 +1,30 @@
+.rodape {
+    background: var(--cor-primaria);
+    color: var(--cor-branca);
+    text-align: center;
+    padding: 10px 20px;
+    position: fixed;  /* fixa no rodapé */
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+    font-size: 1rem;
+}
+
+
+/* Responsividade para tablets */
+@media (max-width: 900px) {
+  .rodape {
+    font-size: 0.95rem;
+    padding: 10px 10px;
+  }
+}
+
+/* Responsividade para celulares */
+@media (max-width: 600px) {
+  .rodape {
+    font-size: 0.85rem;
+    padding: 8px 4px;
+    word-break: break-word;
+  }
+}
