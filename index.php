@@ -93,6 +93,6 @@ require_once APP_ROOT . '/partials/_header.php';
 
 </main>
 
-<script src="script.js"></script>
+<script src="script/script.js"></script>
 
 <?php require_once APP_ROOT . '/partials/_footer.php'; ?>

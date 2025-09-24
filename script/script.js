@@ -24,3 +24,13 @@ document.addEventListener('DOMContentLoaded', function() {
     goToSlide(currentIndex + 1);
   });
 });
+
+
+document.addEventListener('DOMContentLoaded', function() {
+  const btn = document.querySelector('.menu-toggle');
+  const menu = document.querySelector('.menu__links');
+  btn.addEventListener('click', function() {
+    menu.classList.toggle('menu-aberto');
+    btn.setAttribute('aria-expanded', menu.classList.contains('menu-aberto'));
+  });
+});

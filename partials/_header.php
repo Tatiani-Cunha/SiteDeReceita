@@ -6,6 +6,12 @@
             <img src="img/logo-story.png" alt="Logo StoryBites" width="90">            
         </a>
         
+        <!-- Botão do menu hamburguer -->
+        <button class="menu-toggle" aria-label="Abrir menu" aria-expanded="false">
+            <span class="material-symbols-outlined">menu</span>
+        </button>
+
+
         <ul class="menu__links">
             <li><a href="/Site-de-receitas" aria-current="page">INICIO</a></li> <!-- aria-current indica o inicio da pagina atual -->
             <li><a href="pages/doces.php">DOCES</a></li>
@@ -25,3 +31,4 @@
 
     </nav>   
 </header>
+
