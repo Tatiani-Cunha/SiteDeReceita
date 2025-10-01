@@ -84,7 +84,7 @@
 .preparo h3 {
   margin: 14px 0 6px; 
   color: var(--cor-primaria); 
-  font-size: 1rem;
+  font-size: 1.2rem;
 }
 
 
@@ -92,7 +92,7 @@
 .itens-ingredientes, 
 .itens-preparo {
     margin: 8px 0 0 20px;
-    font-size: 0.875rem;
+    font-size: 1rem;
 }
 
 .itens-ingredientes li,

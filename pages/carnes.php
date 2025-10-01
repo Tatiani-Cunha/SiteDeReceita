@@ -33,7 +33,7 @@ require_once APP_ROOT . '/partials/_header.php';
         <section class="ingredientes">
           <h3>Ingredientes</h3>
           <ul class="itens-ingredientes">
-            <li>Tempere os bifes com sa>
+            <li>Tempere os bifes com sal</li>
             <li>4 bifes de contrafilé ou alcatra</li>
             <li>2 cebolas grandes cortadas em rodelas</li>
             <li>2 colheres (sopa) de óleo ou azeite</li>
