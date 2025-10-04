@@ -1,6 +1,11 @@
 /* partials/_header.php */
 /* MENU DE NAVEGAÇÃO (HEADER) */
 
+/* Compensação para header fixo */
+body {
+    padding-top: 120px; /* Altura aproximada do header desktop */
+}
+
 .menu {
     background: var(--cor-primaria); 
     position: fixed; /* fixa no topo ao rolar */
@@ -110,6 +115,10 @@
 
 /* Responsividade para tablets */
 @media (max-width: 900px) {
+  body {
+    padding-top: 80px; /* Altura reduzida para tablet */
+  }
+
   .menu__nav {
     display: flex;
     flex-direction: row;
@@ -246,6 +255,10 @@
 
 /* Responsividade para celulares */
 @media (max-width: 600px) {
+  body {
+    padding-top: 110px; /* Altura para mobile com search-form */
+  }
+
   .menu {
     width: 100vw;
     left: 0;

@@ -185,17 +185,24 @@
 
   .recipe-header {
       flex-direction: column;
-      align-items: flex-start;
+      align-items: center;
       gap: 14px;
   }
 
   .recipe-cover {
-      width: 120px;
-      height: 120px;
+      width: 150px;
+      height: 150px;
+      margin: 0 auto;
+      display: block;
   }
+
+  .recipe-title {
+    flex: 1 1 100px;
+}
 
   .recipe-title h2 {
       font-size: 1rem;
+      text-align: center;
   }
 
   .meta {
@@ -209,7 +216,13 @@
 
   .comentarios h3,
   .ingredientes h3,
-  .preparo h3 {
+  .ingrediente-cobertura,
+  .preparo h3,
+  .itens-preparo li {
+    font-size: 0.875rem;
+  }
+
+  .itens-ingredientes li {
     font-size: 0.875rem;
   }
 
@@ -238,17 +251,24 @@
 
   .recipe-header {
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
     gap: 10px;
   }
 
   .recipe-cover {
     width: 90px;
     height: 90px;
+    margin: 0 auto;
+    display: block;
   }
+
+  .recipe-title {
+    flex: 1 1 80px;
+}
 
   .recipe-title h2 {
     font-size: 0.875rem;
+    text-align: center;
   }
 
   .meta {
@@ -276,6 +296,6 @@
   .comentarios h3,
   .ingredientes h3,
   .preparo h3 {
-    font-size: 0.75rem;
+    font-size: 0.875rem;
   }
 }
